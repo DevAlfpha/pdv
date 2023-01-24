@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1, maximum-scale=1">
+<link href="/layouts/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/layouts/css-pdv-food2/style.css" rel="stylesheet">
+<link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
+<title>Pdv-Food</title>
+<meta name="apple-touch-fullscreen" content="yes">
+<style>
+html, body {
+overscroll-behavior-y: none;
+}
+
+html,
+body {
+position: fixed;
+overflow: hidden;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container-app d-none d-md-block">
+<div class="content-app">
+
+<div class="panel-center">
+
+
+<div class="panel-tools">
+<div class="text-center"><img src="/img/favicon.png" width="30" height="30" alt="img"></div>
+<div class="tools">
+
+<div class="tool-item active">
+<a role='button' class="btn-block"><i data-feather='home' stroke-width='1.5' width='20'></i><div class="list-name pt-1">Home</div></a>
+</div>
+<div class="tool-item"><a role='button' class="btn-block"><i data-feather='pie-chart' stroke-width='1.5' width='20' height='20'></i><div class="list-name pt-1">Dashboard</div></a></div>
+<div class="tool-item"><a role='button' class="btn-block"><i data-feather='bar-chart' stroke-width='1.5' width='20' height='20'></i><div class="list-name pt-1">Messages</div></a></div>
+<div class="tool-item"><a role='button' class="btn-block"><i data-feather='archive' stroke-width='1.5' width='20' height='20'></i><div class="list-name pt-1">Bills</div></a></div>
+<div class="tool-item"><a role='button' class="btn-block"><i data-feather='settings' stroke-width='1.5' width='20' height='20'></i><div class="list-name pt-1">Settings</div></a></div>
+</div>
+<div class="tools-exit">
+<div class="tool-item"><a role='button' class="btn-block"><i data-feather='log-out' stroke-width='1.5' width='20' height='20'></i><div class="list-name pt-1">Log-out</div></a></div>
+</div>
+</div>
+
+<div class="panel-center-boxs">
+
+<div class="row">
+<div class="col-md-4 my-md-auto">
+<div class="text-upper">Menu <span class="fw-light">Categorias</span></div>
+</div>
+<div class="col-md-8 my-md-auto mt-2 d-flex align-items-center">
+
+<button class="btn-input btn me-1"><i data-feather='target' stroke-width='1.5' width='14' height='14'></i></button>
+<button class="btn-input btn me-1"><i data-feather='maximize' stroke-width='1.5' width='14' height='14'></i></button>
+
+<div class="input-search flex-fill">
+<input type="text" name="pesquisa" id="pesquisa" class="form-control form-search" placeholder="Pesquise produtos ou código de barras">
+</div>
+
+</div>
+</div>
+
+<div class="panel-center-categorias">
+<div class="row row-cols-lg-7 gx-xl-4 gx-lg-2">
+<div class="col">
+<div class="categoria-item active">
+<div class="categoria-icone"><i data-feather='coffee' stroke-width='1.5' width='18'></i></div>
+<div class="categoria-text">Hot</div>
+</div>
+</div>
+<div class="col">
+<div class="categoria-item">
+<div class="categoria-icone"><i data-feather='coffee' stroke-width='1.5' width='18'></i></div>
+<div class="categoria-text">Hot</div>
+</div>
+</div>
+<div class="col">
+<div class="categoria-item">
+<div class="categoria-icone"><i data-feather='coffee' stroke-width='1.5' width='18'></i></div>
+<div class="categoria-text">Hot</div>
+</div>
+</div>
+<div class="col">
+<div class="categoria-item">
+<div class="categoria-icone"><i data-feather='coffee' stroke-width='1.5' width='18'></i></div>
+<div class="categoria-text">Hot</div>
+</div>
+</div>
+<div class="col">
+<div class="categoria-item">
+<div class="categoria-icone"><i data-feather='coffee' stroke-width='1.5' width='18'></i></div>
+<div class="categoria-text">Hot</div>
+</div>
+</div>
+<div class="col">
+<div class="categoria-item">
+<div class="categoria-icone"><i data-feather='coffee' stroke-width='1.5' width='18'></i></div>
+<div class="categoria-text">Hot</div>
+</div>
+</div>
+<div class="col">
+<div class="categoria-item">
+<div class="categoria-icone"><i data-feather='coffee' stroke-width='1.5' width='18'></i></div>
+<div class="categoria-text">Hot</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="filter-prods">
+<div class="row">
+<div class="col-md-6 my-md-auto">
+<div class="text-upper2">Chosse <span class="fw-light">Order</span></div>
+</div>
+<div class="col-md-6 my-md-auto text-end">
+<div class="text-upper3"><span class="fw-light">Filtrar Por</span> 
+<select class="selectProds form-select">
+<option>Popular</option>
+<option>Normal</option>
+</select> 
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="panel-center-prods">
+<div class="hide-scrol">
+
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-3">
+
+<div class="col">
+<div class="col-prods" onclick="openModal('modalPrd')" role='button'>
+<div class="imgProdsCenter" style="background-image: url('css-pdv-food/img1.jpg');"><div class="tag">Novo</div></div>
+<div class="title-prods fs-18 mt-2 pt-1">Hamburguer Pickels</div>
+<div class="value-prods fs-18">R$ 26,99 </div>
+</div>
+</div>
+
+<div class="col">
+<div class="col-prods" onclick="openModal('modalPrd')" role='button'>
+<div class="imgProdsCenter" style="background-image: url('css-pdv-food/img1.jpg');"></div>
+<div class="title-prods fs-18 mt-2 pt-1">Hamburguer Pickels</div>
+<div class="value-prods fs-18">R$ 26,99 </div>
+</div>
+</div>
+
+<div class="col">
+<div class="col-prods" onclick="openModal('modalPrd')" role='button'>
+<div class="imgProdsCenter" style="background-image: url('css-pdv-food/img1.jpg');"></div>
+<div class="title-prods fs-18 mt-2 pt-1">Hamburguer Pickels</div>
+<div class="value-prods fs-18">R$ 26,99 </div>
+</div>
+</div>
+
+<div class="col">
+<div class="col-prods" onclick="openModal('modalPrd')" role='button'>
+<div class="imgProdsCenter" style="background-image: url('css-pdv-food/img1.jpg');"></div>
+<div class="title-prods fs-18 mt-2 pt-1">Hamburguer Pickels</div>
+<div class="value-prods fs-18">R$ 26,99 </div>
+</div>
+</div>
+
+<div class="col">
+<div class="col-prods" onclick="openModal('modalPrd')" role='button'>
+<div class="imgProdsCenter" style="background-image: url('css-pdv-food/img1.jpg');"></div>
+<div class="title-prods fs-18 mt-2 pt-1">Hamburguer Pickels</div>
+<div class="value-prods fs-18">R$ 26,99 </div>
+</div>
+</div>
+
+<div class="col">
+<div class="col-prods" onclick="openModal('modalPrd')" role='button'>
+<div class="imgProdsCenter" style="background-image: url('css-pdv-food/img1.jpg');"></div>
+<div class="title-prods fs-18 mt-2 pt-1">Hamburguer Pickels</div>
+<div class="value-prods fs-18">R$ 26,99 </div>
+</div>
+</div>
+
+<div class="col">
+<div class="col-prods" onclick="openModal('modalPrd')" role='button'>
+<div class="imgProdsCenter" style="background-image: url('css-pdv-food/img1.jpg');"></div>
+<div class="title-prods fs-18 mt-2 pt-1">Hamburguer Pickels</div>
+<div class="value-prods fs-18">R$ 26,99 </div>
+</div>
+</div>
+
+<div class="col">
+<div class="col-prods" onclick="openModal('modalPrd')" role='button'>
+<div class="imgProdsCenter" style="background-image: url('css-pdv-food/img1.jpg');"></div>
+<div class="title-prods fs-18 mt-2 pt-1">Hamburguer Pickels</div>
+<div class="value-prods fs-18">R$ 26,99 </div>
+</div>
+</div>
+
+<div class="col">
+<div class="col-prods" onclick="openModal('modalPrd')" role='button'>
+<div class="imgProdsCenter" style="background-image: url('css-pdv-food/img1.jpg');"></div>
+<div class="title-prods fs-18 mt-2 pt-1">Hamburguer Pickels</div>
+<div class="value-prods fs-18">R$ 26,99 </div>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+</div>
+
+<div class="panel-cart">
+
+<div class="panel-upper-cart">
+
+<div class="row">
+<div class="col-xl-9 col-lg-6 my-auto">
+<div class="text-upper">Carrinho</div>
+</div>
+<div class="col-xl-3 col-lg-6 text-end my-auto">
+<button class="btn btn-cart"><i data-feather='settings' stroke-width='1.5' width='16'></i></button>
+</div>
+</div>
+
+<div class="panel-cart-center pe-lg-3">
+<div class="row row-cols-1 gy-4">
+
+<div class="col-12">
+<div class="prods-cart">
+<div>
+<div class="img-prods-cart" style="background-image: url('css-pdv-food/img1.jpg');"></div>
+</div>
+<div class="ps-xl-3 ps-lg-2 flex-itens w-100">
+<div>
+<div class="title-prods">Hamburguer Pickels</div>
+<div class="value-prods">R$ 26,99 </div>
+</div>
+<div class="qtdFont">x3 <a href="javascript:openModal('modalQtd')" class="text-reset"><i data-feather='edit-2' stroke-width='1.5' width='11' height='11'></i></a></div>
+<div class="value-prods">R$ 3,60</div>
+</div>
+</div>
+</div>
+
+<div class="col-12">
+<div class="prods-cart">
+<div>
+<div class="img-prods-cart" style="background-image: url('css-pdv-food/img1.jpg');"></div>
+</div>
+<div class="ps-xl-3 ps-lg-2 flex-itens w-100">
+<div>
+<div class="title-prods">Hamburguer Pickels</div>
+<div class="value-prods">R$ 26,99 </div>
+</div>
+<div class="qtdFont">x3 <a href="javascript:openModal('modalQtd')" class="text-reset"><i data-feather='edit-2' stroke-width='1.5' width='11' height='11'></i></a></div>
+<div class="value-prods">R$ 3,60</div>
+</div>
+</div>
+</div>
+
+<div class="col-12">
+<div class="prods-cart">
+<div>
+<div class="img-prods-cart" style="background-image: url('css-pdv-food/img1.jpg');"></div>
+</div>
+<div class="ps-xl-3 ps-lg-2 flex-itens w-100">
+<div>
+<div class="title-prods">Hamburguer Pickels</div>
+<div class="value-prods">R$ 26,99 </div>
+</div>
+<div class="qtdFont">x3 <a href="javascript:openModal('modalQtd')" class="text-reset"><i data-feather='edit-2' stroke-width='1.5' width='11' height='11'></i></a></div>
+<div class="value-prods">R$ 3,60</div>
+</div>
+</div>
+</div>
+
+<div class="col-12">
+<div class="prods-cart">
+<div>
+<div class="img-prods-cart" style="background-image: url('css-pdv-food/img1.jpg');"></div>
+</div>
+<div class="ps-xl-3 ps-lg-2 flex-itens w-100">
+<div>
+<div class="title-prods">Hamburguer Pickels</div>
+<div class="value-prods">R$ 26,99 </div>
+</div>
+<div class="qtdFont">x3 <a href="javascript:openModal('modalQtd')" class="text-reset"><i data-feather='edit-2' stroke-width='1.5' width='11' height='11'></i></a></div>
+<div class="value-prods">R$ 3,60</div>
+</div>
+</div>
+</div>
+
+<div class="col-12">
+<div class="prods-cart">
+<div>
+<div class="img-prods-cart" style="background-image: url('css-pdv-food/img1.jpg');"></div>
+</div>
+<div class="ps-xl-3 ps-lg-2 flex-itens w-100">
+<div>
+<div class="title-prods">Hamburguer Pickels</div>
+<div class="value-prods">R$ 26,99 </div>
+</div>
+<div class="qtdFont">x3 <a href="javascript:openModal('modalQtd')" class="text-reset"><i data-feather='edit-2' stroke-width='1.5' width='11' height='11'></i></a></div>
+<div class="value-prods">R$ 3,60</div>
+</div>
+</div>
+</div>
+
+
+<div class="col-12">
+<div class="prods-cart">
+<div>
+<div class="img-prods-cart" style="background-image: url('css-pdv-food/img1.jpg');"></div>
+</div>
+<div class="ps-xl-3 ps-lg-2 flex-itens w-100">
+<div>
+<div class="title-prods">Hamburguer Pickels</div>
+<div class="value-prods">R$ 26,99 </div>
+</div>
+<div class="qtdFont">x3 <a href="javascript:openModal('modalQtd')" class="text-reset"><i data-feather='edit-2' stroke-width='1.5' width='11' height='11'></i></a></div>
+<div class="value-prods">R$ 3,60</div>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+
+
+</div>
+
+
+<div class="comanda-bottom">
+<div class="list-comanda">
+<div class="list-left">Subtotal</div>
+<div class="list-right">R$22,40</div>
+</div>
+<div class="list-comanda">
+<div class="list-left">Desconto</div>
+<div class="list-left">R$1,12</div>
+</div>
+<div class="list-comanda">
+<div class="list-left">Taxa de Entrega</div>
+<div class="list-left">R$1,12</div>
+</div>
+</div>
+
+<div class="panel-bottom-cart">
+<div class="box-payment">
+
+<!-- <select class="form-select form-btn">
+<option>Forma de Entrega</option>
+<option>1</option>
+</select>
+
+<select class="form-select form-btn">
+<option>Forma de Pagamento</option>
+<option>1</option>
+</select>
+ -->
+<button class="btn btn-payment mt-1">Pagar R$ 23,99</button>
+<a class="btn btn-cancelar mt-1" href="javascript:alertConfirm()">Cancelar</a>
+<a class="btn btn-imprimir mt-1" href="javascript:alertConfirm()" style="display: none;">Imprimir</a>
+</div>
+</div>
+
+
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+
+<div class="modal fade" id="modalQtd" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-sm">
+<div class="modal-content">
+<div class="modal-header">
+<div class="modal-title cl5">
+<i data-feather='edit-2' stroke-width='1.5' width='14' height='14'></i>
+Editar
+</div>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<div class="row g-2">
+<div class="col-lg-12">
+<label>Quantidade</label>
+<input type="number" id="qtd" name="qtd" class="form-control">
+</div>
+<div class="col-lg-12">
+<a href="#" class="btn btn-primary d-block w-100">SALVAR</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="modal fade" id="modalPrd" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-md">
+<div class="modal-content">
+<div class="modal-header">
+<div class="modal-title cl5">
+<i data-feather='edit-2' stroke-width='1.5' width='14' height='14'></i>
+Produto
+</div>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+
+</div>
+</div>
+</div>
+</div>
+
+
+<script src="/layouts/dist/js/bootstrap.min.js"></script>
+<script src="/layouts/dist/js/jquery-3.6.0.min.js" ></script>
+<script src="/layouts/dist/js/feather.min.js"></script><script>feather.replace()</script>
+
+<script>
+function openModal(modal){
+$("#"+modal).modal("show")
+}
+
+function alertConfirm(){
+if (confirm("Você confirma o cancelamento deste pedido?") != true) {return false;}
+}
+</script>
+
+
+</body>
+</html>
